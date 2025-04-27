@@ -1,0 +1,72 @@
+{% extends 'SPAM/base.html' %}
+{% load static %}
+{% block title %}主页{% endblock %}
+{% block content %}
+<section class="wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-table"></i> 邮件分析</h3>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="/web/index">Home</a></li>
+                <li><i class="fa fa-table"></i> 邮件分析</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <form class="navbar-form" method="POST" action="/huizong">
+                    {% csrf_token %}
+                    <input style="width: 600px" class="form-control" placeholder="请输入邮件内容" type="text"
+                           value="{{ Search }}" name="Search">
+
+                    <!-- 修改模型选择选项 -->
+                    <div class="model-selection" style="margin: 10px 0;">
+                        <label class="radio-inline">
+                            <input type="radio" name="model_type" value="model1" id="model1"> 随机森林分析
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="model_type" value="model2" id="model2"> svm分析
+                        </label>
+                    </div>
+
+                    <button class="btn btn-info">分析</button>
+                </form>
+
+                <!-- 显示分析结果 -->
+                {% if result %}
+                <div class="alert alert-info">
+                    <strong>分析结果:</strong> {{ result }}
+                </div>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 添加localStorage处理代码 -->
+<script>
+$(document).ready(function() {
+    // 读取本地存储的模型选择
+    var selectedModel = localStorage.getItem('selectedModel') || 'model1';
+    
+    // 设置相应的单选按钮为选中状态
+    $('#' + selectedModel).prop('checked', true);
+    
+    // 当用户更改模型选择时保存到localStorage
+    $('input[name="model_type"]').change(function() {
+        localStorage.setItem('selectedModel', $(this).val());
+    });
+    
+    // 表单提交前确保选择了正确的模型
+    $('form').submit(function() {
+        var selectedModel = localStorage.getItem('selectedModel') || 'model1';
+        $('#' + selectedModel).prop('checked', true);
+    });
+});
+
+</script>
+
+{% endblock %}

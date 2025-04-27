@@ -1,0 +1,5 @@
+to_mysql ：导入数据mysql
+word_cloud : 词云
+train ：svm模型
+suiji：随机森林模型
+chuli：处理数据

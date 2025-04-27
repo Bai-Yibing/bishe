@@ -1,0 +1,9 @@
+django==3.2.0
+jieba
+pandas
+sqlalchemy
+matplotlib
+wordcloud
+pillow
+django-allauth
+django-simpleui
