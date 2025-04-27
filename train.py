@@ -134,13 +134,10 @@ if '__main__' == __name__:
     train_x, test_x, train_y, test_y = select_data(x, y, takeup)
     print('takeup finished')
 
-    '''
-    #train num1
-    print '#################### train num1 ##########################'
-    start_time1 = time.time() 
-    TrainerRbf(train_x, train_y).train_classifier()
-    print 'training took %fs!' % (time.time() - start_time1)
-    '''
+    # print('###### train SVM model1 #######')
+    # start_time1 = time()
+    # TrainerRbf(train_x, train_y).train_classifier()
+    # print('training took %fs!' % (time() - start_time1))
 
     print('###### train SVM model2 #######')
     start_time2 = time()

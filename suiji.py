@@ -21,7 +21,7 @@ print('Testing Features Shape:', test_features.shape)
 # 初始模型
 from sklearn.tree import export_graphviz
 from sklearn.ensemble import RandomForestRegressor
-import pydot  # pip install pydot
+import pydot
 
 # 限制树的深度为2级
 af_small = RandomForestRegressor(n_estimators=10, max_depth=5, random_state=42)

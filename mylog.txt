@@ -1,0 +1,68 @@
+********************** trainning start **********************
+takeup finished
+###### train SVM model1 #######
+********************** trainning start **********************
+takeup finished
+###### train SVM model1 #######
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     40469
+           1       1.00      1.00      1.00      4531
+
+    accuracy                           1.00     45000
+   macro avg       1.00      1.00      1.00     45000
+weighted avg       1.00      1.00      1.00     45000
+
+training took 186.905874s!
+confusion matrix
+[[4490    9]
+ [  36  465]]
+TP:4490
+TN:465
+FP:36
+FN:9
+Recalls: 0.9979995554567682
+Precisions: 0.9920459566946531
+Accuracys: 0.991
+f_value: 0.9950138504155125
+*************** Trainning done in 196.793s ***************
+
+
+********************** trainning start **********************
+takeup finished
+###### train SVM model2 #######
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     40469
+           1       0.99      0.99      0.99      4531
+
+    accuracy                           1.00     45000
+   macro avg       0.99      0.99      0.99     45000
+weighted avg       1.00      1.00      1.00     45000
+
+training took 125.131812s!
+confusion matrix
+[[4490    9]
+ [  42  459]]
+TP:4490
+TN:459
+FP:42
+FN:9
+Recalls: 0.9979995554567682
+Precisions: 0.9907325684024714
+Accuracys: 0.9898
+f_value: 0.9943527848521759
+*************** Trainning done in 133.705s ***************
+
+
+Training Features Shape: (45000, 78018)
+Testing Features Shape: (5000, 78018)
+Training Features Shape: (45000, 78018)
+Testing Features Shape: (5000, 78018)
+Training Features Shape: (45000, 78018)
+Testing Features Shape: (5000, 78018)
+Training Features Shape: (45000, 78018)
+Testing Features Shape: (5000, 78018)
+Training Features Shape: (45000, 78018)
+Testing Features Shape: (5000, 78018)
+Accuracy: 92.0 %.
