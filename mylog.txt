@@ -66,3 +66,6 @@ Testing Features Shape: (5000, 78018)
 Training Features Shape: (45000, 78018)
 Testing Features Shape: (5000, 78018)
 Accuracy: 92.0 %.
+Training Features Shape: (45000, 78018)
+Testing Features Shape: (5000, 78018)
+Accuracy: 92.0 %.
